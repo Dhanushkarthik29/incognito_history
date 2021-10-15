@@ -1,0 +1,2 @@
+@echo off
+Powershell -noexit "ipconfig /displaydns | select-string 'Record Name' | foreach-object { $_.ToString().Split(' ')[-1] } | Sort | Out-Gridview"
